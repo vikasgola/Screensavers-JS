@@ -12,7 +12,7 @@ camera.near = 0.015;
 camera.far = 100;
 camera.lookAt(scene.position);
 camera.updateProjectionMatrix();
-//var stats = initStats();
+var stats = initStats();
 
 
 
@@ -60,7 +60,7 @@ function initStats() {
     stats.domElement.style.position = 'absolute';
     stats.domElement.style.left = '0px';
     stats.domElement.style.top = '0px';
-    //document.getElementById("#Stats-output").child =  stats.domElement;
+    document.getElementById("Stats-output").appendChild(stats.domElement);
     return stats;
 }
 
@@ -79,7 +79,7 @@ function onWindowResize() {
 function update(){
     window.addEventListener('resize', onWindowResize, false);//resize callback
     camera.position.z -= 1;
-    //stats.update(); 
+    stats.update(); 
 }
 // main loop
 function animate(){
